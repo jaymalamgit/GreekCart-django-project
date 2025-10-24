@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'accounts',
     'store',
     'carts',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -109,8 +110,16 @@ MESSAGE_TAGS = {
 
 
 # SMTP configuration
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'jaymalam142@gmail.com'
-EMAIL_HOST_PASSWORD = 'ehjp qbpx lmxn zrxb'
 EMAIL_USE_TLS = True
+
+# Your Gmail credentials
+EMAIL_HOST_USER = 'jaymalam142@gmail.com'
+EMAIL_HOST_PASSWORD = 'vchs sbtu rhhm pxgk'  # App password (not your normal Gmail password)
+
+# Default from address
+DEFAULT_FROM_EMAIL = 'GreatKart <jaymalam142@gmail.com>'
